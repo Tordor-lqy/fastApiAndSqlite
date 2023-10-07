@@ -74,6 +74,29 @@
 
                         <v-tab-item>
 
+                            <v-card class="mx-auto my-4" max-width="344" outlined v-for="(item, i) in aboutUs" :key="i">
+                                <v-list-item three-line>
+                                    <v-list-item-content>
+                                        <div class="text-overline mb-4">
+                                            {{item.title}}
+                                        </div>
+                                        <v-list-item-title class="text-h5 mb-1">
+                                            {{item.content}}
+                                        </v-list-item-title>
+                                        <v-list-item-subtitle>{{item.contact}}</v-list-item-subtitle>
+                                    </v-list-item-content>
+
+                                    <v-list-item-avatar tile size="80">
+                                    </v-list-item-avatar>
+                                </v-list-item>
+
+                                <v-card-actions>
+                                    <v-btn outlined rounded text>
+                                        Button
+                                    </v-btn>
+                                </v-card-actions>
+                            </v-card>
+
                         </v-tab-item>
 
                     </v-tabs-items>
@@ -181,7 +204,19 @@
                         { text: '操作', value: 'action' }
                     ],
                     statusInfo: ["待处理", "未付款", "准备处理", "处理中", "订单完成"],
-                    statusColor: ["#FFD710", "#F14C4C", "#569CD6", "#DCDCAA", "#529949"]
+                    statusColor: ["#FFD710", "#F14C4C", "#569CD6", "#DCDCAA", "#529949"],
+                    aboutUs:[
+                        {
+                            title : "QQ",
+                            content : "加入我们",
+                            contact : "326298839",
+                        },
+                        {
+                            title : "QQ",
+                            content : "咨询订单",
+                            contact : "3262978839"
+                        }
+                    ]
                 };
             },
             methods: {
