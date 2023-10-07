@@ -65,8 +65,8 @@ def submitOrder(contact : int):
             'order_status': order[2],
             'account': order[3],
             'password': order[4],
-            'note': order[5],
-            'order_amount': order[6]
+            'note': order[6],
+            'order_amount': order[7]
         }
         orders.append(order_dict)
 
